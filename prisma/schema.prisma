@@ -1,0 +1,75 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model House {
+  id              Int      @id @unique
+  userId          Int      @unique
+  pet             Boolean?
+  smoke           Boolean?
+  alcohol         Boolean?
+  food            Boolean?
+  airConditioning Boolean?
+  internet        String?
+  peopleCount     Int
+  rooms           Int
+  bathrooms       Int
+  rentCost        Int
+  totalFloor      Int
+  floor           Int
+  address         String?
+  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("houses")
+}
+
+model User {
+  id                               Int      @id @unique @default(autoincrement())
+  email                            String   @unique
+  refresh_token                    String?
+  jwt_token                        String?
+  authConfirmToken                 Int?
+  isTwoFactorAuthenticationEnabled Boolean  @default(false)
+  twoFactorAuthenticationSecret    String?
+  displayName                      String?
+  username                         String   @unique
+  hash                             String
+  active                           Boolean  @default(false)
+  verified                         Boolean  @default(false)
+  gender                           String   @default("none")
+  houseData                        String[] @default([])
+  profileData                      String[] @default([])
+  name                             String   @default("")
+  city                             String   @default("")
+  igUsername                       String?
+  profilePhotoUrl                  String?
+  university                       String?
+  faculty                          String?
+  createdAt                        DateTime @default(now())
+  updatedAt                        DateTime @updatedAt
+  messages                         Message?
+  House                            House?
+
+  @@map("users")
+}
+
+model Message {
+  id        String   @id @unique @db.Uuid
+  from      Int      @unique
+  to        Int      @unique
+  text      String   @default("")
+  delivered Boolean  @default(false)
+  seen      Boolean  @default(false)
+  createdAt DateTime @default(now())
+  user      User     @relation(fields: [from], references: [id], onDelete: Cascade)
+}
+
+enum Role {
+  USER
+  ADMIN
+}
