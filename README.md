@@ -6,7 +6,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/emirtuncer/nest-yanodam">
+  <a href="https://github.com/emirtuncer/yanodam-api">
     <img src=".readmeFiles/logo512.png" alt="Logo" width="160" height="160">
   </a>
 
@@ -15,7 +15,7 @@
   <p align="center">
     Yan Odam REST API with NestJS
     <br />
-    <a href="https://github.com/emirtuncer/nest-yanodam">
+    <a href="https://github.com/emirtuncer/yanodam-api">
     <br />
   </p>
 </div>
@@ -95,7 +95,7 @@ To get a local copy up and running, follow these simple steps.
 1. Run Docker on your local machine. [https://www.docker.com/](https://www.docker.com/)
 2. Clone the repo.
    ```sh
-   git clone https://github.com/emirtuncer/nest-yanodam
+   git clone https://github.com/emirtuncer/yanodam-api
    ```
 3. Install NPM packages.
    ```sh
@@ -145,8 +145,8 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
-[license-shield]: https://img.shields.io/github/license/emirtuncer/nest-yanodam.svg?style=for-the-badge
-[license-url]: https://github.com/emirtuncer/nest-yanodam/blob/master/LICENSE.txt
+[license-shield]: https://img.shields.io/github/license/emirtuncer/yanodam-api.svg?style=for-the-badge
+[license-url]: https://github.com/emirtuncer/yanodam-api/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/emir-tuncer
 [erm-screenshot]: .readmeFiles/ERM.png
