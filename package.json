@@ -40,7 +40,7 @@
     "timeout": "node -e \"require('node:timers/promises').setTimeout(1_000)\""
   },
   "dependencies": {
-    "@nestjs-modules/mailer": "^1.8.1",
+    "@nestjs-modules/mailer": "^1.11.0",
     "@nestjs/axios": "^0.1.0",
     "@nestjs/cache-manager": "^2.2.0",
     "@nestjs/common": "^9.0.0",
