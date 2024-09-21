@@ -80,7 +80,7 @@
     "rimraf": "^3.0.2",
     "run-script-webpack-plugin": "^0.1.1",
     "rxjs": "^7.5.5",
-    "socket.io": "^4.5.1",
+    "socket.io": "^4.8.0",
     "uuid": "^8.3.2",
     "webpack": "^5.76.0",
     "webpack-node-externals": "^3.0.0"
